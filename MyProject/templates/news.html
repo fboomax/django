@@ -1,0 +1,9 @@
+{%extends 'base.html'%} {%block title%}News{%endblock%}{%block body%}
+
+{% for new in all %}
+<h1>{{new.author}}</h1>
+<h2>{{new.title}}</h2>
+<p>{{new.description}}</p>
+<p>{{new.pub_date}}</p>
+{% endfor %}
+{%endblock%}
