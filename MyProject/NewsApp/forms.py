@@ -18,5 +18,5 @@ class RegistrationModal(forms.ModelForm):
       'password',
       'email',
       'phone'
-
     ]
+

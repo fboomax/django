@@ -11,5 +11,5 @@ urlpatterns = [
     path('signup/', Register, name =  'Registers'),
     path('addUser/', addUser, name = 'addUser'),
     path('modalform/', modalform, name = 'form'),
-    path('addmodalform/', addmodalform, name ='form') 
+    path('addmodalform/', addmodalform, name ='modalform') 
 ]

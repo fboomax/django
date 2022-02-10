@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.shortcuts import HttpResponse
 from .models import News, RegistrationData
 from .forms import RegistrationForm, RegistrationModal
-# from django.contrib import messages
+from django.contrib import messages
 
 
 # Create your views here.
@@ -93,4 +93,4 @@ def addmodalform(request):
   if mymodalform.is_valid():
     mymodalform.save()
 
-    return redirect('form')
+  return redirect('form')

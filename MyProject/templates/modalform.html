@@ -1,9 +1,9 @@
 {%extends 'base.html'%} {%block title%}MondelForm{%endblock%}{%block body%}
 <h1>Model</h1>
 
-<form action="{% url 'modalform' %}" method="post">{% csrf_token%}</form>
+<form action="{% url 'modalform' %}" method="post">
+  {% csrf_token %} {{modalform.as_p}}
+  <input type="submit" value="Register" />
+</form>
 
-{{modalform.as_p}}
-
-<input type="submit" value="Register" />
 {%endblock%}
