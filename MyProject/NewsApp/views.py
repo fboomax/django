@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.shortcuts import HttpResponse
-from .models import News, RegistrationData
+from .models import News, RegistrationData, NewArticle
 from .forms import RegistrationForm, RegistrationModal
 from django.contrib import messages
 
@@ -94,3 +94,21 @@ def addmodalform(request):
     mymodalform.save()
 
   return redirect('form')
+
+
+def ThisNewArticle(request):
+  
+  articles = NewArticle.objects.all()
+  article = NewArticle.objects.order_by('id')
+
+  print(articles[0].title)
+  
+  context = {
+
+    "articles": articles,
+    "article": article
+
+
+  }
+
+  return render(request, 'newaricle.html', context)

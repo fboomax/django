@@ -1,0 +1,8 @@
+{%extends 'base.html'%} {%block title%}New Article{%endblock%} {%block body%}
+<h1>Article</h1>
+<p>This this the body of Artcle</p>
+{% for new in article %}
+<h2>{{new.title}}</h2>
+<p>{{new.ShortenText}}</p>
+<p>{{new.date}</p>
+{% endfor %} {%endblock%}
